@@ -337,7 +337,16 @@ textarea, label {
 .section-title.light h3::before {
   background-color: #fff;
 }
-
+.Test .Myers_Test {
+  background-color: #fff;
+  border: 5px solid #1e2530;
+  margin-right: 30px;
+  padding: 5px;	
+}
+.Test .Myers_Test img {
+  border: 2px solid #1e2530;
+  width: 145px;
+}
 .page-nav {
   bottom: 40px;
   left: 0;
@@ -589,16 +598,6 @@ textarea, label {
   padding: 5px;
 }
 .about-author .author-thumb img {
-  border: 2px solid #1e2530;
-  width: 145px;
-}
-.Test .Myers_Test {
-  background-color: #fff;
-  border: 5px solid #1e2530;
-  margin-right: 30px;
-  padding: 5px;
-	
-}.Test .Myers_Test img {
   border: 2px solid #1e2530;
   width: 145px;
 }
