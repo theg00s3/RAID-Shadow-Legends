@@ -344,17 +344,8 @@ textarea, label {
 }
 .section-title.light h3::before {
   background-color: #fff;
-}
-.Test .Myers_Test {
-  background-color: #fff;
-  border: 5px solid #1e2530;
+}	
 
-}
-.Test .Myers_Test img {
-  border: 2px solid;
-  width: 40px;
-  vertical-align: middle;	
-}
 .page-nav {
   bottom: 40px;
   left: 0;
