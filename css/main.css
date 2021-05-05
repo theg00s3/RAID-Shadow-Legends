@@ -8,7 +8,14 @@ body {
   line-height: 30px;
   color: #ababab;
 }
-
+table, th, td {
+  font-family: "Libre Baskerville", serif;
+  border: 1px solid #ababab;
+  border-collapse: collapse;
+  text-align: left;
+  color: white;	
+  font-size: 9px;
+}
 a {
   color: inherit;
   -webkit-transition: all 0.3s ease 0s;
