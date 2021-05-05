@@ -351,8 +351,8 @@ textarea, label {
 
 }
 .Test .Myers_Test img {
-  border: 2px solid #1e2530;
-  width: 145px;
+  border: 2px solid;
+  width: 40px;
   vertical-align: middle;	
 }
 .page-nav {
