@@ -10,7 +10,8 @@ body {
 }
 table, th, td {
   font-family: "Libre Baskerville", serif;
-  border: 1px solid #ababab;
+  border: 1px solid;
+  border-color: #ababab;
   border-collapse: collapse;
   color: white;	
   font-size: 13px;
