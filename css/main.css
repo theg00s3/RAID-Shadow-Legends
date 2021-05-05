@@ -341,12 +341,12 @@ textarea, label {
 .Test .Myers_Test {
   background-color: #fff;
   border: 5px solid #1e2530;
-  margin-right: 30px;
-  padding: 5px;	
+
 }
 .Test .Myers_Test img {
   border: 2px solid #1e2530;
   width: 145px;
+  vertical-align: middle;	
 }
 .page-nav {
   bottom: 40px;
