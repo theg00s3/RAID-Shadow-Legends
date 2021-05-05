@@ -1602,3 +1602,15 @@ textarea, label {
     margin-right: 0;
   }
 }
+
+
+
+
+.footer {
+  width: 100%;
+  height: 100px;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  position: fixed;
+  bottom: 0;
+}
