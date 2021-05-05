@@ -5,10 +5,18 @@ body {
   font-family: "Libre Baskerville", serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 30px;
+  line-height: normal;
   color: #ababab;
 }
-
+table, th, td {
+  font-family: "Libre Baskerville", serif;
+  border: 1px solid;
+  border-color: #ababab;
+  border-collapse: collapse;
+  color: white;	
+  font-size: 13px;
+  line-height: normal;
+}
 a {
   color: inherit;
   -webkit-transition: all 0.3s ease 0s;
