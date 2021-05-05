@@ -8,6 +8,11 @@ body {
   line-height: normal;
   color: #ababab;
 }
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 table, th, td {
   font-family: "Libre Baskerville", serif;
   border: 1px solid;
