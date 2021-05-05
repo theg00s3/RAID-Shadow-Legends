@@ -46,111 +46,65 @@
                         <div class="row">
                             <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
                                 <div class="page-title text-center">
-                                    <h2>My <span class="primary">clients</span><span class="title-bg">Speech</span></h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                    <h2>Project <span class="primary">Ideas</span><span class="title-bg">Ideas</span></h2>
+                                    <p>Using Python and Virtual Private Severs to create a Discord-bot that can run Python in Discord Chats. - PyBot</p>
                                 </div>
                             </div>                            
                         </div> <!-- /.row -->
 
                         <div class="row">
                             <div class="col-xs-12">
-                                <div class="testimonials">
-                                    <div class="item clear">
-                                        <figure class="thumb">
-                                            <div class="tm-hex" style="background-image: url('img/tm.jpg');">
-                                                <div class="hexTop"></div>
-                                                <div class="hexBottom"></div>
-                                            </div>
-                                            <figcaption>
-                                                <h4>Adam Drigan</h4>
-                                                <span>CEO, Ultra Solution</span>
-                                            </figcaption>
-                                        </figure>
-                                        <div class="text">
-                                            <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima. </p>
-                                        </div>
+                                <div class="row">
+                                    <div class="text-left">
+                                        <h3 class="text-center">Overview</h3>
+                                        <p>A Discord bot that can run (at first) Python code, for use in Computer Science and IT related Discord servers, so that people can collaboratively view the python output for any commands that are run. It will act almost like a pseudo-version of the Python Integrated Development and Learning Environment (IDLE), so that everyone can view the code output at the same time, without the unnecessary bandwidth used by screensharing programs. Upon setting up the bot to run Python, other coding languages will then be integrated to be used with the bot. Examples including, JavaScript, C++, C#, Flash and Swift.</p>
+                                        <br>
+    
+                                        <h3 class="text-center">Motivation</h3>
+                                        <p>Our motivation for this project comes from doing Foundations of Computing at the University of Melbourne, where we would constantly be discussing various workshop problems in the subject’s Discord server. We’d always argue about correct solutions, because people either had typos or syntax errors, or the version of Python they were running had quirks that weren’t present in the version of Python we were recommended to run. A bot like this would have saved us all a lot of time, as we could collaborate on the code in the server, instead of working on it individually. Also, with the addition of using Trinket during ‘Introduction to programming’. Many users who are doing Bachelor of IT know how buggy it Is when trying to write a program and then trying to save it. This provides further reason of why implementing python bot on to Discord would be a good idea.</p>
+                                        <br>
+                                        
+                                        <h3 class="text-center">Description</h3>
+                                        <p>This Discord bot will be used primarily in the Discord servers of Computer Science and Information Technology students, but it could also be useful in hobbyist servers and technical support servers. How we envision the bot working is someone types the set trigger (for example “!pybot”) and then the version of Python they want (for example 3.8.2) and then their code in a code block (using markdown formatting). This will then output the code that was just run, after which the terminal output gets put into an embedded message, to avoid the terminal output being split up amongst messages from Discord users. Typing the trigger (for example “!pybot”) and then stop will interrupt the running code, in case it’s stuck in a logic loop or something of the like.</p>
+                                        <p>There is a possibility for commercialisation, by restricting the free runtime to a certain number of seconds, and users can pay a certain amount to increase the runtime limit. The VM running in Google Cloud, Microsoft Azure or Amazon Web Services will be a basic, low-cost one running Ubuntu 20.04 LTS, for stability, and the actual bot will be sandboxed, so that people can’t use the VM for executing malicious code that travels across the internet. The output itself will be transmitted through a separate Python process that reads the output of the sandboxed process and transmits it to the Discord server’s webhook.</p>
+                                        <p>Some future ideas for the project would be to integrate other coding languages into the bot so that we are able to target users from other popular languages such as Java, JavaScript, C, C# and C++. This will be done the same way as the initial PyBot, through programming the bot and then hosting it on a VPS where it can run the code and then report the outcome back to the users in the sever.</p>
+                                        <p>Upon researching information to create our bot, we have found that two competing discord bots already exist and perform vaguely similar functions to the bot we wish to create but both are lacking in some departments. The two bots being RTFM (created by a discontinued account) which most similarly mirrors our project idea and Python (created by Retox). When reviewing RTFM, we found that it performs the main function of running various coding languages including Python within the discord server, however, it was very hard to navigate and there was little to no help or guide to begin coding using the bot after adding it to the sever. RTFM was also running on an outdated version of Python which is almost 6 months behind and does not provide the option to update or select a Python version to use, nor is there any information on future patches.</p>
+                                        <p>Python the Bot only has one primary function being to run a Python Script from a Github Repository as well as another repository called pypi.org. The Bot once again offers little to no help and guidance upon joining a sever and takes a bit of guess work to get code to run within discord. It also does not allow the user to type and run Python code within the Discord server itself, as such we do not view Python the Bot as a direct competitor of our project idea.</p>
+                                        <p>Taking into consideration the functions and flaws of the two competing bots RTFM and Python, we envision creating a bot that has the core functionalities of both of the bots in a single entity with increased user friendliness and guidance when first inviting the bot into a sever. This will be done through a welcome message in the server’s designated main text channel, saying “Hello world!” and giving a list of commands that users can run including “help” which will list different areas in which the user might want more information on the functionalities of the bot.</p>
+                                        <br>
+                                        
+                                        <h3 class="text-center">Tools and technologies</h3>
+                                        <p>The software needed for this will simply be Python, but various versions of it to accommodate for everyone’s needs, as well as Discord for testing the bot, and GitHub for hosting the code and maintain proper versioning protocols. The hardware/equipment needed will be a cloud server to run the actual bot, on something like Google Cloud, Microsoft Azure or Amazon Web Services. Alternatively, we could run it using a Raspberry Pi and someone’s residential internet connection, although that would not be super reliable or fast, given the state of Australia’s internet.</p>
+                                        <p>Further research into hosting options for the discord bot has led us to decide on using Amazon Web Services as the provider for our virtual private server. We would be looking to use their Amazon Elastic Compute Cloud (Amazon EC2) web service on their free trial plan which offers 750 hours a month for 12 months hosting. Given that Amazon EC2 also runs primarily on Ubuntu, we will need to have some basic knowledge of working in with Linux as well as Linux commands for Ubuntu, mainly navigation commands such as “make directory”, “list all files in current directory” and “change directory”.</p>
+                                        <br>
+    
+                                        <h3 class="text-center">Skills required</h3>
+                                        <p>This bot shouldn’t be very difficult to code, as Python is a relatively user-friendly language to code in, and the actual running of the server should be easy, as Amazon Web Services make it very easy to spin up servers to run programs. We would also only need a very minimal amount of Linux knowledge in order to navigate the VPS which would be easy enough to learn. It is very feasible to find the skills, software and hardware to create and run this Discord bot. Most, if not all people who are doing Introduction to Information Technology would be familiar with Python, which would greatly assist with building this bot. There are also many guides and tutorials online which show step-by-step instructions on how to set up a discord bot so there is no lack of guidance if we are to get stuck.</p>
+                                        <br>
+    
+                                        <h3 class="text-center">Outcome</h3>
+                                        <p>If this project is successful, the outcome will be a Discord bot running off of Amazon Web Services hardware using their free plan, invited into multiple Computer Science and Information Technology Discord servers and being actively used by members for small scale programming activities. The original problem will be solved as everyone will be working with a standardised version of Python and people will be able to freely share their working code while running without having to struggle with a screensharing program that will take up unnecessary bandwidth and add unneeded complexity to the collaboration process.</p>
+                                        <br>
+
+                                        <h3 class="text-center">References</h3>
+                                        <ul>
+                                            <li>Top.gg. 2021. Python | Discord Bots. [online] Available at: <https://top.gg/bot/815492748249399306> [Accessed 28 April 2021].</li>
+                                            <li>Top.gg. 2021. RTFM | Discord Bots. [online] Available at: <https://top.gg/bot/495914599531675648> [Accessed 28 April 2021].</li>
+                                            <li>Write Bots. 2021. Hosting a Discord Bot the Right Way (Extremely Detailed). [online] Available at: <https://www.writebots.com/discord-bot-hosting/> [Accessed 29 April 2021].</li>
+                                            </ul>
+                                        <br>
+                                        <br>
                                     </div>
-                                    <div class="item clear">
-                                        <figure class="thumb">
-                                            <div class="tm-hex" style="background-image: url('img/tm-2.jpg');">
-                                                <div class="hexTop"></div>
-                                                <div class="hexBottom"></div>
-                                            </div>
-                                            <figcaption>
-                                                <h4>Adam Drigan</h4>
-                                                <span>CEO, Ultra Solution</span>
-                                            </figcaption>
-                                        </figure>
-                                        <div class="text">
-                                            <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima. </p>
-                                        </div>
-                                    </div>
-                                    <div class="item clear">
-                                        <figure class="thumb">
-                                            <div class="tm-hex" style="background-image: url('img/tm.jpg');">
-                                                <div class="hexTop"></div>
-                                                <div class="hexBottom"></div>
-                                            </div>
-                                            <figcaption>
-                                                <h4>Adam Drigan</h4>
-                                                <span>CEO, Ultra Solution</span>
-                                            </figcaption>
-                                        </figure>
-                                        <div class="text">
-                                            <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima. </p>
-                                        </div>
-                                    </div>
-                                    <div class="item clear">
-                                        <figure class="thumb">
-                                            <div class="tm-hex" style="background-image: url('img/tm-2.jpg');">
-                                                <div class="hexTop"></div>
-                                                <div class="hexBottom"></div>
-                                            </div>
-                                            <figcaption>
-                                                <h4>Adam Drigan</h4>
-                                                <span>CEO, Ultra Solution</span>
-                                            </figcaption>
-                                        </figure>
-                                        <div class="text">
-                                            <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima. </p>
-                                        </div>
-                                    </div>
-                                    <div class="item clear">
-                                        <figure class="thumb">
-                                            <div class="tm-hex" style="background-image: url('img/tm.jpg');">
-                                                <div class="hexTop"></div>
-                                                <div class="hexBottom"></div>
-                                            </div>
-                                            <figcaption>
-                                                <h4>Adam Drigan</h4>
-                                                <span>CEO, Ultra Solution</span>
-                                            </figcaption>
-                                        </figure>
-                                        <div class="text">
-                                            <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima. </p>
-                                        </div>
-                                    </div>
-                                    <div class="item clear">
-                                        <figure class="thumb">
-                                            <div class="tm-hex" style="background-image: url('img/tm-2.jpg');">
-                                                <div class="hexTop"></div>
-                                                <div class="hexBottom"></div>
-                                            </div>
-                                            <figcaption>
-                                                <h4>Adam Drigan</h4>
-                                                <span>CEO, Ultra Solution</span>
-                                            </figcaption>
-                                        </figure>
-                                        <div class="text">
-                                            <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima. </p>
-                                        </div>
-                                    </div>
-                                </div>
+                                </div>    
                             </div>
                         </div> <!-- /.row -->
+                        <br>
+                        <br>
+                        <br>
+                        <br>
                     </div> <!-- /.container -->
 
-                    <nav class="page-nav clear">
+                    <nav class="page-nav clear footer">
                         <div class="container">
                             <div class="flex flex-middle space-between">
                                 <span class="prev-page"><a href="technologies.html" class="link">&larr; Prev Page</a></span>
